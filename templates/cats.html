@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cats API</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cats_stylesheet.css') }}">
+    <script>
+        function generateCat() 
+        {
+            window.location.href = "/?generate=true";
+        }
+    </script>
+</head>
+<body>    
+    <div class="container">
+        <h1>Click the button and get a cat for free</h1>
+        <button onclick="generateCat()">Generate a cat</button>
+        <br>
+        <p><i>"{{ cat_fact }}"</i></p>
+        <img src="{{ cat_image_url }}" alt="Kot">
+    </div>
+</body>
+</html>
